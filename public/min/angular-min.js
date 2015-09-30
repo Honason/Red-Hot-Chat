@@ -1,0 +1,1 @@
+var redChat=angular.module("redChat",["ngRoute","smoothScroll"]);

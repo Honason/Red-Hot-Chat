@@ -1,0 +1,1 @@
+redChat.directive("chatRoom",function(){return{templateUrl:"directives/chat-room.html",replace:!0}}),redChat.directive("createRoom",function(){return{templateUrl:"directives/create-room.html",replace:!0}});

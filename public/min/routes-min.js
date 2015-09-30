@@ -1,0 +1,1 @@
+redChat.config(["$routeProvider","$locationProvider",function(e,o){e.when("/",{templateUrl:"pages/home.html",controller:"homeController"}).when("/:id",{templateUrl:"pages/chat.html",controller:"chatController"}),o.html5Mode(!0)}]);

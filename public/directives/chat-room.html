@@ -1,0 +1,31 @@
+<div class="width">
+	<div class="chat-box" id="cont">
+		<div class="messages-box">
+			<ul>
+				<li class="message left" ng-repeat="message in messages" smooth-scroll duration="500" container-id="cont" scroll-if="{{ $last }}">
+					<span class="info">from <span ng-bind="message.sender.username"></span> at <span ng-bind="message.time | date:'H:mm'"></span></span>
+					<div class="chat-bubble" ng-bind="message.text"></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="user-box">
+		<span>Online users</span>
+		<ul class="online-users">
+			<li ng-repeat="user in onlineUsers">
+				{{user.username}}
+				<span ng-if="user.username === userObj.username">(You)</span>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="input-message">
+		<form>
+			<div class="input-wrapper">
+				<input type="text" placeholder="Your message" ng-model="messageInput">
+			</div>
+			<button ng-click="sendMessage(messageInput)" class="send-button">Send</button>
+		</form>
+	</div>
+</div>

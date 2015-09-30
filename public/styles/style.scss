@@ -1,0 +1,218 @@
+$red_color: #FF1F45;
+$gray_color: #969696;
+
+body {
+  font: 14px Helvetica, "Lucida Grande", Arial, sans-serif;
+  background-color: #F5F5F5;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.right {float: right;}
+.left {float: left;}
+
+div.width {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	max-width: 1100px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 64px;
+	&.chat {
+		padding-top: 0px;
+	}
+}
+
+// Header
+div.header {
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	width: 100%;
+	height: 64px;
+	background-color: white;
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+	box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+	
+	h2 {
+		float: left;
+		margin-left: 20px;
+		margin-top: 0px;
+		line-height: 64px;
+		color: #686868;
+		strong {
+			color: $red_color;
+		}
+	}
+}
+
+// Chat box
+div.chat-box {
+	float: left;
+	width: 60%;
+	max-height: 100%;
+	overflow: scroll;
+	
+	div.messages-box {
+		float: left;
+		width: 100%;
+		padding-bottom: 100px;
+		padding-top: 90px;
+		ul {
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+			
+			li.message {
+				clear: both;
+				width: 100%;
+				margin-bottom: 20px;
+				&:last-child {
+					padding-bottom: 0px;
+					margin-bottom: 0px;
+				}
+				&.left span.info, &.left div.chat-bubble { float: left; }
+				&.right span.info, &.right div.chat-bubble { float: right; }
+				span.info {
+					color: $gray_color;
+					margin-bottom: 8px;
+				}
+				
+				div.chat-bubble {
+					clear: both;
+					background-color: white;
+					color: #636363;
+					border-radius: 3px;
+					padding: 16px;
+					max-width: 90%;
+					min-width: 60%;
+					-webkit-box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+					-moz-box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+					box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+				}
+			}
+		}
+	}
+}
+
+// User box
+div.user-box {
+	float: right;
+	margin-top: 90px;
+	width: 30%;
+	padding: 16px 16px 0px 16px;
+	background-color: white;
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+	box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+	&>span {
+		color: $gray_color;
+	}
+	ul.online-users {
+		list-style: none;
+		padding: 0px;
+		margin-bottom: 5px;
+		li {
+			border-top: 1px solid #F0F0F0;
+			line-height: 36px;
+		}
+	}
+}
+
+// Input message
+div.input-message {
+	position: absolute;
+	bottom: 30px;
+	width: 60%;
+	background-color: rgba(245,245,245,1);
+	-webkit-box-shadow: 0px 0px 30px 20px rgba(245,245,245,1);
+	-moz-box-shadow: 0px 0px 30px 20px rgba(245,245,245,1);
+	box-shadow: 0px 0px 30px 20px rgba(245,245,245,1);
+	
+	input {
+		width: 100%;
+		height: 40px;
+		border: none;
+		border-radius: 3px;
+		background-color: #E7E7E7;
+		padding: 0px 16px;
+	}
+	div.input-wrapper {
+		width: auto;
+		overflow: hidden;
+		margin-right: 120px; 
+	}
+	button {
+		float: right;
+		margin-top: -40px;
+		height: 40px;
+		border: none;
+		background-color: white;
+		border-radius: 3px;
+		width: 100px;
+		-webkit-box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+		-moz-box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+		box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+	}
+}
+
+// Create room box
+div.center-box {
+	h2 {
+		font-size: 24px;
+		font-weight: 200;
+		strong {
+			color: $red_color;
+		}
+	}
+	p {
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	color: #686868;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	min-width: 400px;
+	padding: 30px;
+	text-align: center;
+	
+	background-color: white;
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+	box-shadow: 0px 1px 2px 0px rgba(143,143,143,0.2);
+	
+	button.create-room {
+		background-color: $red_color;
+		color: white;
+		border: none;
+		margin-top: 20px;
+		padding: 10px 20px;
+		border-radius: 3px;
+	}
+}

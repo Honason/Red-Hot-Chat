@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="redChat">
+	<head>
+		<meta charset="utf-8">
+		<title>Red Chat</title>
+		
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/style.css">
+		<!-- Modules -->
+		<script src="node_modules/angular/angular.min.js"></script>
+		<script src="node_modules/angular-route/angular-route.min.js"></script>
+		<script src="js/angular-smooth-scroll.min.js"></script>
+		<script src="node_modules/socket.io/node_modules/socket.io-client/socket.io.js"></script>
+		
+		<script src="angular.js"></script>
+		<script src="routes.js"></script>
+		<script src="services.js"></script>
+		<script src="controllers.js"></script>
+		<script src="directives.js"></script>
+		
+		<base href="/">
+	</head>
+	<body ng-controller="homeController">
+		<ng-view></ng-view>
+	</body>
+</html>
