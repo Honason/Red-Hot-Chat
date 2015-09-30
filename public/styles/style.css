@@ -50,6 +50,12 @@ div.header {
   -webkit-box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2);
   -moz-box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2);
   box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2); }
+  div.header.support {
+    background-color: #FF1F45; }
+    div.header.support h2 {
+      color: white; }
+      div.header.support h2 strong {
+        color: white; }
   div.header h2 {
     float: left;
     margin-left: 20px;
@@ -99,11 +105,65 @@ div.chat-box {
           -moz-box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2);
           box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2); }
 
+div.right-box {
+  float: right;
+  width: 30%;
+  margin-top: 90px; }
+  div.right-box .real-name {
+    float: right;
+    width: 100%; }
+    div.right-box .real-name p {
+      color: #969696; }
+  div.right-box div.input-name-box {
+    float: left;
+    width: 100%; }
+    div.right-box div.input-name-box input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #D8D8D8;
+      line-height: 30px;
+      width: 100%; }
+    div.right-box div.input-name-box button.change-name {
+      float: right;
+      width: 36px;
+      height: 36px;
+      background-color: white;
+      border: none;
+      -webkit-box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2);
+      -moz-box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2);
+      box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2);
+      background-image: url("../images/check_icon.svg");
+      background-repeat: no-repeat;
+      background-position: center center; }
+
+div.link-box {
+  float: right;
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2);
+  -moz-box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2);
+  box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2); }
+  div.link-box span.title {
+    color: #969696;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px; }
+  div.link-box span.chat-link {
+    float: left;
+    color: #555555;
+    text-decoration: none;
+    margin-right: 6px; }
+  div.link-box span.copy {
+    font-weight: 600;
+    color: #555555; }
+
 div.user-box {
   float: right;
-  margin-top: 90px;
-  width: 30%;
+  width: 100%;
   padding: 16px 16px 0px 16px;
+  margin-bottom: 20px;
   background-color: white;
   -webkit-box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2);
   -moz-box-shadow: 0px 1px 2px 0px rgba(143, 143, 143, 0.2);
@@ -120,6 +180,9 @@ div.user-box {
 
 div.input-message {
   position: absolute;
+  left: 0px;
+  padding-left: 20px;
+  padding-right: 4px;
   bottom: 30px;
   width: 60%;
   background-color: whitesmoke;
@@ -177,3 +240,17 @@ div.center-box {
     margin-top: 20px;
     padding: 10px 20px;
     border-radius: 3px; }
+
+@media screen and (max-width: 700px) {
+  div.right-box {
+    display: none; }
+
+  div.chat-box {
+    width: 100%; }
+
+  div.input-message {
+    width: 100%;
+    padding-right: 20px;
+    /*left: 0px;
+    padding-left: 20px;
+    margin-right: 20px;*/ } }

@@ -18,7 +18,6 @@ redChat.service('chatService', ['$http', function($http){
   };
 }]);
 
-
 redChat.factory('socket', ['$rootScope', function ($rootScope) {
   var socket = io.connect();
   return {
@@ -42,3 +41,16 @@ redChat.factory('socket', ['$rootScope', function ($rootScope) {
     }
   };
 }]);
+
+redChat.filter('unique', function() {
+  return function (arr, field) {
+    var o = {}, i, l = arr.length, r = [];
+    for(i=0; i<l;i+=1) {
+      o[arr[i][field]] = arr[i];
+    }
+    for(i in o) {
+      r.push(o[i]);
+    }
+    return r;
+  };
+});

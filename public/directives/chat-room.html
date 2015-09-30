@@ -18,6 +18,10 @@
 				<span ng-if="user.username === userObj.username">(You)</span>
 			</li>
 		</ul>
+		<form>
+			<input type="text" placeholder="Your name" ng-model="inputName">
+			<button class="change-name" ng-click="changeName(inputName)">Change</button>
+		</form>
 	</div>
 	
 	<div class="input-message">

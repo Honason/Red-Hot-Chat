@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header" ng-class="userObj.support ? 'support' : ''">
 	<h2>Red <strong>Chat</strong></h2>
 </div>
 
@@ -14,14 +14,30 @@
 		</div>
 	</div>
 	
-	<div class="user-box">
-		<span ng-click="changeNameSpace()">Online users</span>
-		<ul class="online-users">
-			<li ng-repeat="user in onlineUsers" style="color: {{user.color}};">
-				{{user.username}}
-				<span ng-if="user.username === userObj.username">(You)</span>
-			</li>
-		</ul>
+	<div class="right-box">
+		<div class="link-box">
+			<span class="title">Anyone can join this chat on:</span>
+			<span class="chat-link" ng-bind="url"></span>
+		</div>
+		
+		<div class="user-box">
+			<span>Online users</span>
+			<ul class="online-users">
+				<li ng-repeat="user in onlineUsers | unique:'username'" style="color: {{user.color}};">
+					{{user.username}}
+					<span ng-if="user.username === userObj.username">(You)</span>
+				</li>
+			</ul>
+		</div>
+		
+		<form class="real-name" ng-if="!userObj.real">
+			<p ng-if="!userObj.support"><span style="color: {{userObj.color}};" ng-bind="userObj.username"></span> is great, but your real name is even better.</p>
+			<p ng-if="userObj.support">You can chage your username here.</p>
+			<div class="input-name-box">
+				<input type="text" placeholder="Real name" ng-model="inputName">
+				<button class="change-name" ng-click="changeName(inputName)"></button>
+			</div>
+		</form>
 	</div>
 	
 	<div class="input-message">
