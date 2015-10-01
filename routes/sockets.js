@@ -100,7 +100,6 @@ module.exports = function(io) {
                 userObjects.push({id: socket.user.id, username: socket.user.username, color: socket.user.color, support: socket.user.support});
             }
         });
-        //console.log(userObjects);
         return userObjects;
     };
     
