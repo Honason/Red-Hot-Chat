@@ -13,6 +13,7 @@ You can try out live demo [Here](http://www.nocturnbits.com) or install Node app
 
 ```sh
 cd path/to/Red-Hot-Chat
+npm install
 npm start
 ```
 
